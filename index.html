@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Placar Série A</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="wrap">
+  <header class="top">
+    <h1 class="brand">Placar <span>Série A</span></h1>
+    <div class="stamp">Brasileirão 2026 · <b>34ª rodada</b> · dados de 07/11/2026</div>
+  </header>
+
+  <section class="summary" aria-label="Resumo do campeonato">
+    <div class="stat lead"><div class="k">Líder</div><div class="v">Flamengo</div><div class="s num">76 pontos em 34 jogos</div></div>
+    <div class="stat"><div class="k">Vice-líder</div><div class="v">Palmeiras</div><div class="s num">73 pontos · 3 atrás</div></div>
+    <div class="stat"><div class="k">1º do Z4 (17º)</div><div class="v">Corinthians</div><div class="s num">37 pontos · Grêmio também tem 37</div></div>
+    <div class="stat"><div class="k">Jogos disputados</div><div class="v num">339 / 380</div><div class="bar" aria-hidden="true"><i></i></div></div>
+  </section>
+
+  <main class="grid">
+    <section class="panel" aria-labelledby="h-tab">
+      <div class="panel-head">
+        <h2 id="h-tab">Classificação</h2>
+        <div class="controls">
+          <div class="tabs" role="tablist" aria-label="Filtrar tabela">
+            <button class="tab" role="tab" aria-selected="true" data-f="all">Todos</button>
+            <button class="tab" role="tab" aria-selected="false" data-f="lib">Libertadores</button>
+            <button class="tab" role="tab" aria-selected="false" data-f="z4">Z4</button>
+          </div>
+          <input id="busca" type="search" placeholder="Buscar time" aria-label="Buscar time">
+        </div>
+      </div>
+      <div class="tablewrap">
+        <table>
+          <thead>
+            <tr>
+              <th class="l">#</th><th class="l">Clube</th><th>P</th><th>J</th><th>V</th><th>E</th><th>D</th><th>SG</th><th>Últimos 5</th><th>Risco de Z4</th>
+            </tr>
+          </thead>
+          <tbody id="corpo"></tbody>
+        </table>
+      </div>
+      <div id="vazio" class="empty" hidden>Nenhum time encontrado.</div>
+      <div class="legend">
+        <span class="a">1º ao 5º: Libertadores garantida</span>
+        <span class="b">6º ao 9º: Libertadores se sobrar vaga</span>
+        <span class="c">17º ao 20º: rebaixamento</span>
+      </div>
+    </section>
+
+    <div class="side">
+      <section class="panel" aria-labelledby="h-res">
+        <div class="panel-head">
+          <h2 id="h-res">Resultados</h2>
+          <div class="tabs" role="tablist" aria-label="Escolher rodada">
+            <button class="tab" role="tab" aria-selected="true" data-r="34">34ª</button>
+            <button class="tab" role="tab" aria-selected="false" data-r="33">33ª</button>
+            <button class="tab" role="tab" aria-selected="false" data-r="32">32ª</button>
+          </div>
+        </div>
+        <ul class="games" id="resultados"></ul>
+      </section>
+
+      <section class="panel" aria-labelledby="h-next">
+        <div class="panel-head"><h2 id="h-next">Próximos jogos</h2><span class="stamp">Horário de Brasília</span></div>
+        <ul class="games" id="proximos"></ul>
+      </section>
+    </div>
+  </main>
+
+  <p class="foot">
+    Resultados e classificação conferidos em 07/11/2026, depois da 34ª rodada. A coluna de risco de Z4 é uma estimativa do Modelo ValorFinal por simulação, não uma previsão. Chapecoense e Vasco têm um jogo a menos, marcado para 14/11. Esta página é estática: para atualizar, os dados ficam no início do script.
+    Os emblemas são desenhos ilustrativos e não têm relação com os escudos oficiais dos clubes.
+    Fonte: <a href="https://valorfinal.com.br/tabela-brasileirao-serie-a" target="_blank" rel="noopener">ValorFinal</a>, com resultados do football-data.org.
+  </p>
+  <footer class="autor"><b>Guilherme Silva</b> - Aluno do Curso de Tec da Informação da UESPI</footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
